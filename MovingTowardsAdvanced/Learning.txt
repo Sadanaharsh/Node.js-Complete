@@ -1,0 +1,107 @@
+dependency vd dev-dependency 
+dev-dependency me vo dependencies aati hain, jinhe hum production me nahi lekar jaate hain.
+For eg -> nodemon ko as a dev dependency install karne ke liye use command -> npm install --save-dev nodemon
+
+..................
+Controllers -> In controllers we will write the main functionality. Logic 
+db -> In db we will write the logic of connection to the database.
+miidlewares -> In middlewares, we write the functionality ki frontend se koi request aa rhi hai, then wo backened pe serve hone se pehle ke kuch logic.
+models -> models me hum apna database ka schema banate hain.
+routes -> routes show karne ke liye ek standard approach hoti hai, ki kis route par konsa data bhejna hai.
+utils -> shortcut hai utility ka. jo functionality baar baar repeat hogi generally wo hi yahan par rakhte hain.
+
+Note -> git aapke empty folders ka trach nahi rakhta hai.
+
+dev dependency ko install karne ke liye generally -d laga diya jaata hai.
+Humne prettier install kiya hai, taaki merge conflicts na aaye and prettier ko humne as a dev dependency install kiya hai.
+prettier ke liye 2 files manually banani padti hain.
+prettier rc me basically hum rules likhte hain, and prettier ignore me hum yeh likhte hain ki kon kon si files me prettier ko ignore karna hai.
+
+
+................................................................
+becrypt -> Bcrypt helps you to hash your password. Encrypted Password is stored in the database.
+
+We make tokens using JWT (JSON Web Token).
+JWT tokens comprises of three parts -> Header, Payload(user ka id, email jo bhi bhejna chahate ho wo encrypt ho jayega.), secret(secret is the thing jo ki token ko unique banata hai and token ko protect karta hai.)
+
+
+.........................................................................
+HTTP Crash Course...
+
+HTTP (Hyper Text Transfer Protocol)
+It is basically a client server model.
+
+HTTPS -> S means secure. Jab text ko client se server me bheja jaata hai, tab usko encrypt karke bhejte hain, ie ek aur layer laga di jaati hai.
+
+URL (Uniform Resource Locator), URI ( Uniform Resource Identifier), URN (Uniform Resource Name) -> These three are just addresses ki hume kis location par baat karni hai.
+
+
+What are HTTP headers?
+  
+  It is meta data -> key-value sent along with request and response.
+  Headers are used for caching, authentication and manage state.
+
+  Request Headers -> from client
+  Response Headers -> from server
+  Representation headers -> encoding / compression
+  Payload Headers -> data
+
+
+Most Common Headers -> 
+Accept : application/json (It just tells us that mai json format ka data accept kar raha hoon.)
+User-Agent (Konsi application se request aayi hai, mobile browser se, web browser se etc.)
+Authorization
+Content-Type (kya bhej rahe ho images, pdf etc)
+Cookie
+Cache Control
+
+HTTP methods
+Basic set of operations that can be used to interact with server.
+
+GET -> retrieve a Resource
+HEAD -> No msg body (Response headers only)
+OPTIONS -> It tells us what are the REST options available such as GET, POST, PUT etc.
+TRACE -> loopback test (generally used for debugging) get some data
+DELETE -> remove a Resource
+PUT -> replace a Resource
+POST -> interact with a Resource. (mostly add)
+PATCH -> change part of the resource.
+
+
+HTTP Status Code -> 
+  1XX Informational (passing any information to the user.)
+  2XX Success
+  3XX Redirection (resource kahi aur chla gya hai)
+  4XX Client Error
+  5XX Server Error
+
+  Some common codes -> 
+  100 Continue
+  102 Processing
+  200 OK
+  201 Created
+  202 Accepted
+  307 Temporarily Redirect
+  308 Permanent Redirect
+
+  400 Bad Request
+  401 Unauthorized
+  402 Payment Required
+  404 Not found
+  500 Internal Server Error
+  504 Gateway timeout
+
+................................................................................
+
+Note -> Login karte time we should have both access token as well as the refresh token. Access token is shortly lived, it will expire soon, but 
+refresh token is long lived , when the access token is expired hum refresh token ko database se match karwa lenge and we don't need to enter the login credentials again.
+
+Info About Access Token and Refresh Token...
+Access Token and Refresh token ki need isliye hai because we don't want ki user again and again apna email and password daale.
+
+Since access token is short lived and refresh token is long lived, jab access token expire ho jaata hai, then hum log api end point hit karte hain.
+and since refresh token is also saved in the database, and refresh token ki help se firse naya session start karwa lete hain.
+
+Since MongoDB is the non relational database, so everytime a new document is created.
+
+

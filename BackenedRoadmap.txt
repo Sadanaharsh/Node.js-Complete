@@ -1,0 +1,32 @@
+
+A Programming Language - Java, JS, PHP, golang, CPP
+
+A Database - Mongo, MySQL, PostgreSQL, SQLlite => ORM ODM
+
+Note -> Database is always in the another continenet.
+
+We will learn two libraries express (helps in routing) and mongoose (for the database).
+
+A javascript based backened
+We will handle data     We will handle files (pdfs, imgs etc)   Third Party (API) suppose google login karwana hai.
+
+A JS runtime : NodeJS / Demo / Bun
+Package.json     .env       (Readme, git, prettier etc)
+
+src (Main Directory)
+files inside src -> index (Main entry point, DB connects),  APP (config, cookie)  constants (enums, DB-name)
+
+Other Directories (Directory Structure) ->
+DB (Code which connects to the database)
+Models (We create schema of the database here)
+Controllers (Functionalities or methods jo data lete hain and then process karte hain.)
+Routes (All the routes are defined here.)
+Middleware
+Utils (Suppose mail karwana hai)
+More (depends)
+
+
+.....................................................
+
+Kisi bhi javascript file ko run karne ke line use node index.js command, If packages.json installed then use the command written in the script.
+If written start then use npm run start. 
